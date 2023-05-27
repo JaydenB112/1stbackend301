@@ -21,9 +21,7 @@ async function searchMovies(movie, city) {
       },
     });
 
-    const movies = movieResponse.data.results.filter((movie) =>
-      movie.title.toLowerCase().includes(city.toLowerCase())
-    );
+    const movies = movieResponse.data.results
 
     if (movies.length === 0) {
       throw new Error('No movies found');
