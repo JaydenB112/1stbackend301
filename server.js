@@ -7,6 +7,8 @@ const cors = require('cors')
 const axios = require('axios')
 const getWeather = require('./Weather')
 const searchMovies = require('./Movies')
+const NodeCache = require('node-cache')
+const myCache = new NodeCache();
 // initializing app
 app.use(cors());
 app.get('/weather', async (request, response) => {
